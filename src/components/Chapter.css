@@ -1,0 +1,52 @@
+.chapter {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  transform: translate3d(0, 0, 0);
+  will-change: opacity;
+  backface-visibility: hidden;
+  opacity: 0;
+}
+
+.chapter[data-active='true'] {
+  z-index: 10;
+}
+
+.chapter-enter {
+  animation: chapterEnter 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes chapterEnter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+[data-animate] {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
+}
+
+[data-animate].animated {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chapter-enter,
+  [data-animate] {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .chapter,
+  [data-animate].animated {
+    opacity: 1;
+  }
+}

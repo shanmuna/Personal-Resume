@@ -1,0 +1,39 @@
+:root {
+  --primary: #0a0e27;
+  --accent: #00d4ff;
+  --neutral-light: #e0e0e0;
+  --neutral-dark: #a0a0a0;
+  --bg-secondary: #1a1f3a;
+  
+  /* 栅格 */
+  --grid-columns: 12;
+  --gutter: calc(1rem + 0.5vw);
+  
+  /* 排版 */
+  --font-size-base: calc(1rem + 0.3vw);
+  --font-size-h1: calc(2.5rem + 1vw);
+  --font-size-h2: calc(2rem + 0.5vw);
+  --font-size-h3: calc(1.5rem + 0.3vw);
+  --letter-spacing: calc(0.02em + 0.1vw);
+  
+  /* 动画 */
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 0.3s;
+  --duration-normal: 0.6s;
+  --duration-slow: 1.2s;
+}
+
+@supports (color: color(display-p3 1 0 0)) {
+  :root {
+    --accent: color(display-p3 0 0.83 1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0.01ms;
+    --duration-normal: 0.01ms;
+    --duration-slow: 0.01ms;
+  }
+}

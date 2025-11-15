@@ -1,0 +1,271 @@
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a0e27;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .hero-wrapper {
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+.hero-wrapper > canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.hero-main {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.hero-left {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-avatar {
+  width: 280px;
+  height: 280px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 2px solid rgba(0, 212, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 212, 255, 0.15);
+}
+
+.hero-right {
+  flex: 1;
+  text-align: left;
+  min-width: 0;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-role {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.hero-desc-section {
+  margin-bottom: 0;
+}
+
+.hero-desc-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(224, 224, 224, 0.9);
+  margin: 0 0 8px 0;
+  letter-spacing: 0.3px;
+}
+
+.hero-desc-subtitle {
+  font-size: 0.9rem;
+  color: rgba(224, 224, 224, 0.65);
+  margin: 0;
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+}
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: rgba(224, 224, 224, 0.35);
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hero-scroll-hint svg {
+  stroke: currentColor;
+  width: 16px;
+  height: 24px;
+}
+
+.hero-scroll-hint-mobile {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: rgba(224, 224, 224, 0.35);
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 60px;
+}
+
+.hero-scroll-hint-mobile svg {
+  stroke: currentColor;
+  width: 16px;
+  height: 24px;
+}
+
+@media (max-width: 1024px) {
+  .hero-main {
+    gap: 50px;
+  }
+
+  .hero-avatar {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-role {
+    font-size: 1.1rem;
+  }
+
+  .hero-desc-title {
+    font-size: 0.95rem;
+  }
+
+  .hero-desc-subtitle {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 0;
+    height: auto;
+  }
+
+  .hero-main {
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-avatar {
+    width: 160px;
+    height: 160px;
+  }
+
+  .hero-right {
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-role {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-desc-section {
+    margin-bottom: 0;
+  }
+
+  .hero-desc-title {
+    font-size: 0.9rem;
+  }
+
+  .hero-desc-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .hero-cursor-glow {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 0;
+  }
+
+  .hero-main {
+    gap: 8px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .hero-avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hero-title {
+    font-size: 1rem;
+    margin-bottom: 2px;
+  }
+
+  .hero-role {
+    font-size: 0.7rem;
+    margin-bottom: 4px;
+  }
+
+  .hero-desc-section {
+    margin-bottom: 0;
+  }
+
+  .hero-desc-title {
+    font-size: 0.65rem;
+    margin-bottom: 2px;
+  }
+
+  .hero-desc-subtitle {
+    font-size: 0.6rem;
+    line-height: 1.2;
+  }
+
+  .hero-scroll-hint {
+    display: none;
+  }
+
+  .hero-scroll-hint-mobile {
+    display: flex;
+  }
+}
