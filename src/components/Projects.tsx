@@ -5,7 +5,7 @@ import './Projects.css'
 const projectsData = [
   {
     title: 'SmartAlert Online',
-    logo: '/smaralert.jpg',
+    logo: 'smaralert.jpg',
     date: '2022-04 ~ 2023-12',
     role: '项目经理/开发',
     overview: '多租户云环境下的IT运维管理服务，采用前后端分离模式',
@@ -23,7 +23,7 @@ const projectsData = [
   },
   {
     title: '车熙熙',
-    logo: '/cxx.jpg',
+    logo: 'cxx.jpg',
     date: '2021-09 ~ 至今',
     role: '开发/实施/运维',
     overview: '根据国家相关主管部门要求开发的二手车交易服务平台',
@@ -59,7 +59,7 @@ export default function Projects() {
             >
               <div className="project-header">
                 <div className="project-title-group">
-                  {project.logo && <img src={project.logo} alt={project.title} className="project-logo" />}
+                  {project.logo && <img src={`${import.meta.env.BASE_URL}${project.logo}`} alt={project.title} className="project-logo" />}
                   <h3>{project.title}</h3>
                 </div>
                 <span className="project-role">{project.role}</span>

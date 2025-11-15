@@ -56,7 +56,7 @@ export default function Hero() {
             transition={{ duration: 1, ease: 'easeOut' }}
           >
             <motion.img
-              src="/avatar.png"
+              src={`${import.meta.env.BASE_URL}avatar.png`}
               alt="avatar"
               className="hero-avatar"
               initial={{ opacity: 0, scale: 0.8 }}
