@@ -1,5 +1,7 @@
 {
+  
   "name": "personal-resume",
+  "homepage": "https://shanmuna.github.io/Personal-Resume/",
   "private": true,
   "version": "0.0.1",
   "type": "module",
