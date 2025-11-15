@@ -46,7 +46,7 @@ export default function Header() {
     >
       <div className="header-content">
         <div className="header-left">
-          <img src="/avatar.png" alt="avatar" className="header-avatar" />
+          <img src={`${import.meta.env.BASE_URL}avatar.png`} alt="avatar" className="header-avatar" />
           <span className="header-name">贾振华</span>
         </div>
         
